@@ -6,7 +6,8 @@ class UserTest < ActiveSupport::TestCase
   # end
   def setup
     @user = User.new(
-      name: "Example User",
+      full_name: "Example User",
+      name: "User",
       email: "user@example.com",
       password: "foobar",
       password_confirmation: "foobar"
@@ -15,6 +16,11 @@ class UserTest < ActiveSupport::TestCase
   
   test "should be valid" do
     assert @user.valid?
+  end
+  
+  test "full_name should be present" do
+    @user.full_name = "   "
+    assert_not @user.valid?
   end
   
   test "name should be present" do
