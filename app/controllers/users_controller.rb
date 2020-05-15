@@ -1,11 +1,5 @@
 class UsersController < ApplicationController
   
-  def login
-    @user = User.find_by(
-      email: params[:email]
-      )
-  end
-  
   def new
     @user = User.new
   end
