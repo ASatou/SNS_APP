@@ -1,0 +1,25 @@
+<h1>Login</h1>
+<div class="row">
+  <div class = "col-md-6 col-md-offset-3">
+    <div class="login">
+      <%= form_with(model: @user, local: true) do |f| %>
+        <%= render 'shared/error_messages' %>
+      
+        <%= f.text_field :email, class: "form_control", placeholder: "メールアドレス" %>
+        <%= f.password_field :password, class: "form_control", placeholder: "パスワード" %>
+
+        <%= f.submit "ログイン", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div>
+      <p>―――または―――</p>
+      <p>facebookでログイン</p>
+      <p>パスワードを忘れた場合</p>
+    </div>
+    <div>
+      <p>アカウントをお持ちではないですか？</p>
+      <p>登録する</p>
+    </div>
+    
+  </div>
+</div>

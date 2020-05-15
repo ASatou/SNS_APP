@@ -7,10 +7,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      #Success
+      flash[:success] = "ユーザー登録が完了しました"
+      redirect_to @user
     else
-      #Failure
-      flash[:notice] = "入力内容に誤りがあります"
+      flash.now[:danger] = "入力内容に誤りがあります"
       render 'new'
     end
   end
