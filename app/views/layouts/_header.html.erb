@@ -2,13 +2,14 @@
   <div class="container">
     <%= link_to "sample app", '#', id: "logo" %>
     <nav>
+      <% if logged_in? %>
       <ul class="nav navbar-nav navbar-right">
-        <% if logged_in? %>
-          <li><%= link_to "Top",   '#' %></li>
-          <li><%= link_to "Notice",   '#' %></li>
-          <li><%= link_to "Profile", '#' %></li>
-        <% end %>
+        <li><%= link_to "Top", '#' %></li>
+        <li><%= link_to "Notice",   '#' %></li>
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Logout", logout_path, method: :delete %></li>
       </ul>
+      <% end %>      
     </nav>
   </div>
 </header>
