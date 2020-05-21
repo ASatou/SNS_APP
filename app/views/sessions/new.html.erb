@@ -7,6 +7,11 @@
       
         <%= f.text_field :email, class: "form_control", placeholder: "メールアドレス" %>
         <%= f.password_field :password, class: "form_control", placeholder: "パスワード" %>
+        
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>ログイン情報を記憶する</span>
+        <% end %>  
 
         <%= f.submit "ログイン", class: "btn btn-primary" %>
       <% end %>
