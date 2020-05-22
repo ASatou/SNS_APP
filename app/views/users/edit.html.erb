@@ -1,0 +1,24 @@
+<h1>Update user's profile</h1>
+
+<div class = "row">
+  <div class = "col-md-6 col-md-offset-3">
+    
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+      
+      <h3>公開情報</h3>
+        <%= f.text_field :full_name, class: 'form_control', placeholder: 'フルネーム（必須）' %>
+        <%= f.text_field :name, class: 'form_control', placeholder: 'ユーザー名（必須）' %>
+        <%= f.text_field :profile, class: 'form_control', placeholder: '自己紹介' %>
+        <%= f.text_field :website, class: 'form_control', placeholder: 'ウェブサイト' %>
+        
+      <h3>非公開情報</h3>
+        <%= f.text_field :email, class: 'form_control', placeholder: 'メールアドレス（必須）' %>
+        <%= f.text_field :tel, class: 'form_control', placeholder: '電話番号' %>
+        <%= f.text_field :sex, class: 'form_control', placeholder: '性別' %>
+        
+      <%= f.submit "登録情報を更新する", class: "btn btn-primary" %>
+        
+    <% end %>
+  </div>
+</div>
