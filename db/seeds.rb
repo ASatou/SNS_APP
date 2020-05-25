@@ -6,7 +6,8 @@ User.create!( full_name: "Example User",
               profile: "hogehogefoobar",
               website: "https://sample_app",
               tel: "1234567890",
-              sex: "male"
+              sex: "male",
+              admin: true
             )
             
 99.times do |n|
