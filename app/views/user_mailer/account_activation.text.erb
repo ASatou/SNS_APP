@@ -1,0 +1,4 @@
+<%= @greeting %>、<%= @user.name %>さん
+
+以下のURLをクリックして、Sample Appのアカウント認証を完了させてください。
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

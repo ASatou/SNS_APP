@@ -1,0 +1,8 @@
+<h1>Sample App</h1>
+
+<p><%= @greeting %>、<%= @user.name %>さん</p>
+<br>
+<p>
+  以下のURLをクリックして、Sample Appのアカウント認証を完了させてください。
+</p>
+<%= link_to "アカウントを認証する", edit_account_activation_url(@user.activation_token, email: @user.email) %>
