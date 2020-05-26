@@ -33,7 +33,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   end
   
   test "authenticated? should return false when user's remember_digest is nil" do
-    assert_not @user.authenticated?('')
+    assert_not @user.authenticated?(:remember, '')
   end
   
   test "login with remembering" do
