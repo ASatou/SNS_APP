@@ -1,0 +1,11 @@
+<% provide(:title, "Post") %>
+
+<%= form_with(model: @micropost, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "コメントを入力してください" %>
+  </div>
+  <%= f.submit "投稿する", class: "btn btn-primary" %>
+<% end %>
+
+<%= @feed_items%>
