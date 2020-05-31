@@ -15,6 +15,12 @@ gem 'faker', '~> 1.4', '>= 1.4.2'
 gem 'will_paginate', '~> 3.3'
 gem 'bootstrap-will_paginate', '~> 1.0'
 
+gem 'active_storage_validations', '~> 0.8.9'
+gem 'image_processing', '~> 1.11'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+
+gem 'aws-sdk-s3', '~> 1.67'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
