@@ -6,6 +6,7 @@
     <%= micropost.content %>
   </span>
   <span class="timestamp">
+    <%= render 'likes/like', micropost: micropost %>
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
     <% if current_user?(micropost.user) %>
       <%= link_to "削除", micropost, method: :delete,
