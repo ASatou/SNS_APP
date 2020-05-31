@@ -1,3 +1,4 @@
+# ユーザー
 User.create!( full_name: "Example User",
               name: "Example",
               email: "foobar@example.com",
@@ -12,7 +13,7 @@ User.create!( full_name: "Example User",
               activated_at: Time.zone.now
             )
             
-99.times do |n|
+50.times do |n|
   full_name = Faker::Name.name
   name = full_name
   email = "user-#{n}@example.com"
@@ -26,11 +27,19 @@ User.create!( full_name: "Example User",
     activated: true,
     activated_at: Time.zone.now
     )
+end
     
+# マイクロポスト    
 users = User.order(:created_at).take(6)
-50.times do
+10.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.microposts.create!(content: content) }
 end
 
-end
+# リレーションシップ
+users = User.all
+user  = users.first
+following = users[2..25]
+followers = users[3..20]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
