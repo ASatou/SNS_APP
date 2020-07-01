@@ -10,7 +10,7 @@
                                'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class=<%="login" if yield(:title) == "Login" %>>
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |message_type, message| %>
