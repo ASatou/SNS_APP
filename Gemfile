@@ -22,8 +22,6 @@ gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'aws-sdk-s3', '~> 1.67'
 gem 'counter_culture', '~> 2.5', '>= 2.5.1'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -48,6 +46,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 end
 
 group :development do
@@ -57,7 +56,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  
   gem 'better_errors'
   gem 'binding_of_caller'
 end
@@ -68,6 +66,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+group :production do
+  gem 'pg', '~> 1.2', '>= 1.2.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
