@@ -297,7 +297,7 @@ span.image {
   }
 }
 
-.login{
+.enter_form{
   background-image: url("https://images.unsplash.com/photo-1592494299036-7e3593f3acb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   background-size: cover;
   background-position: center center;
@@ -316,7 +316,6 @@ span.image {
     line-height: 20px;
     width: 180px;
     overflow: hidden;
-    font-weight: bold;
     background: linear-gradient(#999 0%, #777 100%);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
@@ -343,7 +342,6 @@ span.image {
     text-align: center;
     text-decoration: none;
     color: #222;
-    font-weight: bold;
-    
+    font-weight: bold; 
   }
 }
