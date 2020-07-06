@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  
   get 'likes/create'
   get 'likes/destroy'
   get 'password_resets/new'
