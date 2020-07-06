@@ -1,4 +1,3 @@
-# ユーザー
 User.create!( full_name: "Example User",
               name: "Example",
               email: "foobar@example.com",
