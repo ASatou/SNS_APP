@@ -17,7 +17,9 @@
         <% end %>
       </div>
     <% end %>
-    <%= link_to "プロフィールを編集する", edit_user_path(@user) %>
+    <% if current_user?(@user) %>
+      <%= link_to "プロフィールを編集する", edit_user_path(@user) %>
+    <% end%>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>    

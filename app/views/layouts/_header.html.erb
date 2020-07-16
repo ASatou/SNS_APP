@@ -3,12 +3,11 @@
     <% if logged_in? %>
     <%= link_to "sample app", microposts_path, id: "logo" %>
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Top", microposts_path %></li>
-        <li><%= link_to "Users", users_path %></li>        
-        <li><%= link_to "Notice",   '#' %></li>
-        <li><%= link_to "Profile", current_user %></li>
-        <li><%= link_to "Logout", logout_path, method: :delete %></li>
+      <ul class="nav navbar-nav navbar-right" >
+        <li><%= link_to "Top", microposts_path, id:"list" %></li>
+        <li><%= link_to "Users", users_path, id:"list" %></li>
+        <li><%= link_to "Profile", current_user, id:"list" %></li>
+        <li><%= link_to "Logout", logout_path, method: :delete, id:"list" %></li>
       </ul>
     </nav>
     <% else %>

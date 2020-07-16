@@ -1,10 +1,10 @@
 <% if !current_user?(micropost.user) %>
     <span class="like">
     <% if micropost.like?(current_user) %>
-      <%= link_to "いいね済み", likes_destroy_url %>
+      <%= link_to "いいね済み", like_path, method: "destroy" %>
       <%= content_tag :span, "#{micropost.likes_count}", class: "glyphicon glyphicon-heart" %>
     <% else %>
-      <%= link_to "いいね", likes_create_url %>
+      <%= link_to "いいね", likes_path, method: "post" %>
       <%= content_tag :span, "#{micropost.likes_count}", class: "glyphicon glyphicon-heart" %>
     <% end %>
   </span>
