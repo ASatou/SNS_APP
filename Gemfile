@@ -21,7 +21,7 @@ gem 'active_storage_validations', '~> 0.8.9'
 gem 'aws-sdk-s3', '~> 1.67'
 gem 'counter_culture', '~> 2.5', '>= 2.5.1'
 
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
